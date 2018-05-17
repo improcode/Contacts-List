@@ -15,7 +15,7 @@ const Controls = (props) => (
         placeholder={'name'}
         fullWidth={true}
     />
-        <Divider />
+
         <TextField
             onChange={props.onChangeHandler2}
             value={props.newPhoneValue}
@@ -23,7 +23,7 @@ const Controls = (props) => (
             placeholder={'phone'}
             fullWidth={true}
         />
-        <Divider />
+
         <TextField
             onChange={props.onChangeHandler3}
             value={props.newMailValue}

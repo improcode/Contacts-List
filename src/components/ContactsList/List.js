@@ -3,7 +3,7 @@ import React from 'react'
 import Task from './Task'
 import Container from '../UI/Container'
 
-const List = ({tasksList}) => (
+const List = ({tasksList, deleteTaskFunction}) => (
     <Container>
         {
             tasksList
@@ -14,6 +14,7 @@ const List = ({tasksList}) => (
                         phone={task.phone}
                         mail={task.mail}
                         key={task.uid}
+                        deleteTask={() => deleteTaskFunction(task.uid)}
                     />
                 ))
         }

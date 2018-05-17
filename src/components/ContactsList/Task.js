@@ -1,18 +1,24 @@
 import React from 'react'
 
 import {Card, CardHeader} from 'material-ui/Card';
+import Delete from 'material-ui/svg-icons/action/delete';
 
 
-const Task = ({name, phone, mail}) => (
+const Task = ({name, phone, mail, deleteTask}) => (
+    <div>
         <Card>
             <CardHeader
                 title={name}
                 subtitle={phone + ', ' + mail}
-            />
-
-
+            >
+                <Delete
+                    onClick={deleteTask}
+                />
+        </CardHeader>
         </Card>
 
+
+    </div>
 )
 
 export default Task

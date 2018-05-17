@@ -13,6 +13,12 @@ class ContactsList extends React.Component {
         newMail: ''
     }
 
+    deleteTask = (uid) => {
+        const newList = this.state.people.filter(people => uid !== people.uid)
+        this.setState({
+            people: newList
+        })
+    }
 
     addTask = () => {
         if (this.state.newTask === '' || this.state.newPhone === '' || this.state.newMail === '' )
@@ -60,6 +66,7 @@ class ContactsList extends React.Component {
                 />
                 <List
                     tasksList={this.state.people}
+                    deleteTaskFunction={this.deleteTask}
                 />
             </div>
         )
