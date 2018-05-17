@@ -15,20 +15,23 @@ class ContactsList extends React.Component {
 
 
     addTask = () => {
-        const newTask = {
-            name: this.state.newTask,
-            phone: this.state.newPhone,
-            mail: this.state.newMail,
-            uid: Date.now()
-        }
-        const newTasks = this.state.people.concat(newTask)
+        if (this.state.newTask === '' || this.state.newPhone === '' || this.state.newMail === '' )
+        {alert('Musisz uzupełnić wszystkie pola')} else {
+            const newTask = {
+                name: this.state.newTask,
+                phone: this.state.newPhone,
+                mail: this.state.newMail,
+                uid: Date.now()
+            }
+            const newTasks = this.state.people.concat(newTask)
 
-        this.setState({
-            people: newTasks,
-            newTask: '',
-            newPhone: '',
-            newMail: ''
-        })
+            this.setState({
+                people: newTasks,
+                newTask: '',
+                newPhone: '',
+                newMail: ''
+            })
+        }
     }
 
     newTaskChangeHandler1 = (event, newValue) => this.setState({

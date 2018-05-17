@@ -4,14 +4,15 @@ import {Card, CardHeader} from 'material-ui/Card';
 
 
 const Task = ({name, phone, mail}) => (
-    <Card>
-        <CardHeader
-            title={name}
-            subtitle={phone + ', ' + mail}
-        />
+        <Card>
+            <CardHeader
+                title={name}
+                subtitle={phone + ', ' + mail}
+            />
 
 
-    </Card>
+        </Card>
+
 )
 
 export default Task
