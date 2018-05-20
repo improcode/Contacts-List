@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Task from './Task'
+import Contact from './Contact'
 import Container from '../UI/Container'
 
 const List = ({tasksList, deleteTaskFunction}) => (
@@ -9,7 +9,7 @@ const List = ({tasksList, deleteTaskFunction}) => (
             tasksList
 
                 .map(task => (
-                    <Task
+                    <Contact
                         name={task.name}
                         phone={task.phone}
                         mail={task.mail}

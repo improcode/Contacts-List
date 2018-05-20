@@ -4,7 +4,7 @@ import {Card, CardHeader} from 'material-ui/Card';
 import Delete from 'material-ui/svg-icons/action/delete';
 
 
-const Task = ({name, phone, mail, deleteTask}) => (
+const Contact = ({name, phone, mail, deleteTask}) => (
     <div>
         <Card>
             <CardHeader
@@ -21,4 +21,4 @@ const Task = ({name, phone, mail, deleteTask}) => (
     </div>
 )
 
-export default Task
+export default Contact

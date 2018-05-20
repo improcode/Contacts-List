@@ -21,8 +21,8 @@ class ContactsList extends React.Component {
     }
 
     addTask = () => {
-        if (this.state.newTask === '' || this.state.newPhone === '' || this.state.newMail === '' )
-        {alert('Musisz uzupełnić wszystkie pola')} else {
+        if (this.state.newTask === '')
+        {alert('Musisz uzupełnić nazwe kontaktu')} else {
             const newTask = {
                 name: this.state.newTask,
                 phone: this.state.newPhone,
